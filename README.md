@@ -1,50 +1,110 @@
-# Welcome to your Expo app 👋
+# Skybrews Coffee App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A full-stack mobile application for a coffee shop built with React Native and Node.js.
 
-## Get started
+## Project Overview
 
-1. Install dependencies
+This is a complete coffee shop application originally developed as a university project. It includes a live menu, shopping cart, and full checkout process.
 
-   ```bash
+## Features
+
+### Core Functionality
+- Complete mobile app for coffee ordering
+- Live menu with item details
+- Shopping cart that saves between sessions
+- Full checkout process with order confirmation
+
+### Technical Features
+- React Native frontend with Expo
+- Node.js and Express backend
+- MongoDB database
+- Global state management
+- Automatic IP configuration
+
+### User Experience
+- View detailed item information
+- "Surprise Me" feature for random item selection
+- Modern and clean interface
+- Real-time cart updates
+- Form validation during checkout
+
+## Technology Stack
+
+### Frontend
+- React Native
+- Expo
+
+
+### Backend
+- Node.js
+- Express
+- MongoDB with Mongoose
+
+## Setup Instructions
+
+### Backend Setup
+
+1. Navigate to backend folder:
+   ```
+   cd backend
+   ```
+
+2. Install dependencies:
+   ```
    npm install
    ```
 
-2. Start the app
+3. Create environment file:
+   - Create .env file with MongoDB connection string
 
-   ```bash
-   npx expo start
+4. Database setup:
+   - Create database: coffee_shop_db
+   - Create collection: menu_items
+   - Add menu data
+
+5. Start server:
+   ```
+   node server.js
    ```
 
-In the output, you'll find options to open the app in a
+### Frontend Setup
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Navigate to frontend folder:
+   ```
+   cd frontend
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-## Get a fresh project
+3. Start application:
+   ```
+   npx expo start -c
+   ```
 
-When you're ready, run:
+4. Use Expo Go app to scan QR code
 
-```bash
-npm run reset-project
+## API Endpoints
+
+- GET /menu - Get all menu items
+- GET /menu/random - Get random item
+- GET /menu/:id - Get specific item
+
+## Project Structure
+
+```
+skybrews-coffee-app/
+├── backend/
+│   ├── server.js
+│   ├── models/
+│   └── routes/
+├── frontend/
+│   ├── app/
+│   ├── components/
+│   ├── store/
+│   └── apiConfig.ts
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
