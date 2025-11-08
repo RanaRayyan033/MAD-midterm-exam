@@ -1,6 +1,6 @@
-# Skybrews Coffee App
+Coffee App
 
-A full-stack mobile application for a coffee shop built with React Native and Node.js.
+A mobile application for a coffee shop built with React Native and Node.js.
 
 ## Project Overview
 
